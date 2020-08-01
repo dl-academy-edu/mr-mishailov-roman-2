@@ -1,24 +1,90 @@
-header {
-  background-color: #89f7fe;
-  height: 80px;
-  display: flex;
-  align-items: center;
+/* Header  */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;}
 
-  span {
-    padding-right: 20px;
-  }
+.header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 
-  a {
-    color: #000;
-    text-decoration: none;
+    padding-top: 50px;
+}
+.header-img:hover, .header-nav-link:hover, .header-list-contact:hover , .header-list-button:hover {
+    opacity: 50%;
+}
 
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-    &:hover {
-      border-bottom: 1px solid #000;
-    }
-  }
+.header-img:active, .header-nav-link:active, .header-list-contact:active , .header-list-button:active {
+    opacity: 25%;
+}
+
+.header-nav-text {
+    display: flex;
+    margin-left: 20px;
+    flex-wrap: wrap;
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 
+.header-nav-link {
+    margin-left: 20px;
+
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+
+    color: #1E0606;
+}
+
+.header-list-contact {
+    text-transform: uppercase;
+
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+
+
+    color: #1E0606;
+}
+
+
+.button {
+    padding: 9px 22px;
+
+    max-width: 161px;
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    border: 0px;
+    background-color: #000000;
+    border-color: transparent;
+    display: block;
+}
+
+.button:hover {
+    background-color: #C29974;
+    cursor: pointer;
+}
+.button:active {
+    background-color: #CFAF91;
+}
+
+.header-list-button  {
+    background-color: transparent;
+    border: none;
+    padding: 0 22px;
+
+}
