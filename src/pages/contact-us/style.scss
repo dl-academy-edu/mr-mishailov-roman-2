@@ -1,0 +1,109 @@
+/* Contact pages */
+@import "../../components/form/form";
+.contact-us-title {
+    font-family: 'Montserrat','Arial', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color:  #1E0606 ;
+    text-transform: uppercase;
+    
+    margin-top: 60px;
+    margin-bottom: 15px;
+   
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0 0;
+    margin: 0 0;
+
+}
+
+.nav-margin {
+    margin-right: 20px;
+}
+
+.link-text {
+    font-family: 'Crimson Text','Georgia', serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    color: #1E0606;
+}
+.text-finish {
+    opacity: 50%;
+}
+
+.contact-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+
+
+.support {
+    display: block;
+    box-sizing: border-box;
+    width: 380px;
+}
+.support-text {
+    font-family: Open Sans;
+    font-size: 16px;
+    line-height: 22px;
+    
+    color: #1E0606;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.support-bottom-text {
+    font-family:'Montserrat','Arial', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 34px;
+
+    text-transform: uppercase;
+
+    color: #C29974;
+
+}
+
+
+
+.input-checkbox-checker {
+    position: absolute;
+    display: block;
+    border: 2px solid #C29974;
+    box-sizing: border-box;
+    border-radius: 3px;;
+    
+    width: 19px;
+    height: 19px;
+
+    align-items: center;
+}
+
+
+.input-checkbox:checked ~.input-checkbox-checker::before {
+    content: "";
+
+    position: absolute;
+    display: inline-block;
+    
+
+    width: 19px;
+    height: 19px;
+
+    background-image: url(/static/images/Group.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    top: -2px;
+    left: -2px;
+
+
+}

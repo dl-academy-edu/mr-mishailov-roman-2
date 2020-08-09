@@ -1,0 +1,51 @@
+.article-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 0 0;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 380px;
+
+}
+
+.article-date {
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    font-family: 'Roboto','Arial',sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #818181;
+
+}
+
+.article-title {
+    font-family: 'Montserrat','Arial',sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+
+    margin: 0 0;
+    color: #1E0606;
+}
+.article-title:hover{
+    text-decoration: underline;
+}
+
+.article-text {
+    font-family: 'Open Sans','Arial',sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+
+    margin: 0 0;
+
+    color: #1E0606;
+}
+

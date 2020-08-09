@@ -10,81 +10,97 @@
     flex-wrap: wrap;
 
     padding-top: 50px;
+
+    &__img {
+
+        &:hover { 
+            opacity: 50%;
+        }
+        &:active {
+            opacity: 25%;
+        }
+
+    }
 }
-.header-img:hover, .header-nav-link:hover, .header-list-contact:hover , .header-list-button:hover {
+ .header-list-contact:hover , .header-list-button:hover {
     opacity: 50%;
 }
-
-.header-img:active, .header-nav-link:active, .header-list-contact:active , .header-list-button:active {
+ .header-list-contact:active , .header-list-button:active {
     opacity: 25%;
 }
 
-.header-nav-text {
+.navigation {
     display: flex;
     margin-left: 20px;
     flex-wrap: wrap;
+
+    &__list {
+        display: flex;
+        margin-left: 20px;
+        flex-wrap: wrap;
+
+    }
+
+    &__link {
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+
+    color: #1E0606;
+        &:hover {
+            opacity: 50%;
+        }
+        &:active {
+            opacity: 25%;
+        }
+    }
+
 }
 
-.header-search {
+
+.search {
     display: flex;
     align-items: center;
     margin-left: auto;
     margin-bottom: 0;
     margin-top: 0;
+
+    &__button { 
+        background-color: transparent;
+        border: none;
+        padding: 0 22px;
+        
+        &:hover {
+            opacity: 50%;
+        }
+        &:active {
+            opacity: 25%;
+        }
+    }
+
+        
+
+
+    &__contact {
+        text-transform: uppercase;
+
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 19px;
+        background-color: transparent;
+        border: none;
+    
+        color: #1E0606;
+        &:hover {
+            opacity: 50%;
+        }
+        &:active {
+            opacity: 25%;
+        }
+    }
 }
 
 
-.header-nav-link {
-    margin-left: 20px;
-
-    font-size: 14px;
-    line-height: 19px;
-    text-transform: uppercase;
-
-    color: #1E0606;
-}
-
-.header-list-contact {
-    text-transform: uppercase;
-
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 19px;
 
 
-    color: #1E0606;
-}
-
-
-.button {
-    padding: 9px 22px;
-
-    max-width: 161px;
-
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 22px;
-    text-transform: uppercase;
-
-    color: #FFFFFF;
-    border: 0px;
-    background-color: #000000;
-    border-color: transparent;
-    display: block;
-}
-
-.button:hover {
-    background-color: #C29974;
-    cursor: pointer;
-}
-.button:active {
-    background-color: #CFAF91;
-}
-
-.header-list-button  {
-    background-color: transparent;
-    border: none;
-    padding: 0 22px;
-
-}

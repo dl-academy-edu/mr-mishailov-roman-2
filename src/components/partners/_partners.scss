@@ -1,0 +1,20 @@
+.partners {
+    margin: 90px auto;
+    padding: 0 0;
+}
+.partners-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+
+.partners-logo {
+    padding-top: 50px;
+}
+.partners-logo:hover {
+    opacity: 50%;
+}
