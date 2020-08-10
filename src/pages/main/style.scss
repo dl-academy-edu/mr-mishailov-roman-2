@@ -1,31 +1,32 @@
-main.index-main {
-  padding: 30px 0;
+
+@import "../../components/poster/poster";
+@import "../../components/category/category";
+@import "../../components/responsive/responsive";
+@import "../../components/partners/partners";
+@import "../../components/bottom-container/bottom-container";
+
+.form-box {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    background-color: rgba(125, 151, 218, 0.8);
+    z-index: 10;
 }
 
-.parallax-card {
-  max-width: 300px;
+.form-box_open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  &__wrapper-img {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 100%;
-  }
-  &__img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: none;
-    height: 100%;
-    min-width: 100.5%;
-  }
-  &__description {
-    background-color: #ff5722;
-    padding: 20px 10px;
-    text-align: center;
-    color: #fff;
-  }
-  &__paragraph {
-    margin: 0;
-  }
+}
+
+.exit-button{
+    border:none;
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
 }
