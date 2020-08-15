@@ -1,0 +1,82 @@
+.contact-us-title {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: #1E0606;
+  text-transform: uppercase;
+
+  margin-top: 60px;
+  margin-bottom: 15px;
+
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0 0;
+  margin: 0 0;
+
+}
+
+.nav-margin {
+  margin-right: 20px;
+}
+
+.link-text {
+  font-family: 'Crimson Text', 'Georgia', serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 25px;
+  color: #1E0606;
+}
+
+.text-finish {
+  opacity: 50%;
+}
+
+
+@keyframes taxi {
+  from {
+    bottom: 15%;
+    right: -100%;
+  }
+  50% {
+    bottom: 15%;
+    right: 75%;
+  }
+  to {
+    bottom: 15%;
+    right: 125%;
+
+  }
+}
+
+.animation {
+  margin: 0 auto;
+  width: 1400px;
+  padding: 0 10px;
+
+  display: block;
+  position: relative;
+
+  height: 768px;
+
+  background-image: url("../../static/images/animation/city.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  margin-bottom: 150px;
+  overflow: hidden;
+
+}
+
+.taxi {
+  position: absolute;
+  width: 74%;
+
+  animation: taxi 15s;
+  animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 1.0);
+
+
+}
+
