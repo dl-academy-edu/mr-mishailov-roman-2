@@ -40,14 +40,126 @@
     bottom: 15%;
     right: -100%;
   }
+  30% {
+    bottom: 15%;
+    right: 25%;
+  }
   50% {
     bottom: 15%;
-    right: 75%;
+    right: 25%;
   }
   to {
     bottom: 15%;
     right: 125%;
 
+  }
+}
+
+@keyframes arm {
+  from {
+    position: absolute;
+    bottom: 43%;
+    right: 72%;
+
+    transform: rotate(150deg);
+    transform-origin: bottom left;
+  }
+  50% {
+    position: absolute;
+    bottom: 43%;
+    right: 72%;
+
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+  }
+
+  to {
+    position: absolute;
+    bottom: 43%;
+    right: 72%;
+
+    transform: rotate(150deg);
+    transform-origin: bottom left;
+  }
+}
+
+@keyframes car1 {
+  from {
+    bottom: 29%;
+    left: -200%;
+  }
+  to {
+    bottom: 29%;
+    left: 200%;
+  }
+}
+
+@keyframes car2 {
+  from {
+    bottom: 31%;
+    left: -200%;
+  }
+  to {
+    bottom: 31%;
+    left: 200%;
+  }
+}
+
+@keyframes car3 {
+  from {
+    bottom: 30%;
+    left: -200%;
+  }
+  to {
+    bottom: 30%;
+    left: 200%;
+  }
+}
+
+@keyframes car4 {
+  from {
+    bottom: 32%;
+    left: -200%;
+  }
+  to {
+    bottom: 32%;
+    left: 200%;
+  }
+}
+
+@keyframes w-message {
+  from {
+    width: 0;
+  }
+  50% {
+    width: 11%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes m-message {
+  from {
+    width: 0;
+  }
+  50% {
+    width: 11%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes t-message {
+  from {
+    width: 0;
+  }
+  50% {
+    width: 11%;
+  }
+  to {
+    width: 0;
   }
 }
 
@@ -73,10 +185,186 @@
 .taxi {
   position: absolute;
   width: 74%;
-
-  animation: taxi 15s;
+  bottom: 15%;
+  right: -100%;
+  animation: taxi 20s;
+  animation-delay: 10s;
   animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 1.0);
+  animation-fill-mode: forwards;
 
 
 }
 
+.lamppost-far {
+  position: absolute;
+  bottom: 25%;
+  right: -4%;
+
+  &_1 {
+    position: absolute;
+    bottom: 25%;
+    right: 57%;
+  }
+}
+
+.lamppost-close {
+  position: absolute;
+  right: 11%;
+  bottom: 3%;
+}
+
+.man {
+  position: absolute;
+  right: 65%;
+  bottom: 4%;
+}
+
+.woman {
+  position: absolute;
+  right: 80%;
+  bottom: 4%;
+}
+
+.cases {
+  position: absolute;
+  right: 74%;
+  bottom: 4%;
+}
+
+.cases {
+  position: absolute;
+  right: 74%;
+  bottom: 4%;
+}
+
+.arm {
+  position: absolute;
+  bottom: 43%;
+  right: 72%;
+
+  transform: rotate(150deg);
+  transform-origin: bottom left;
+
+  animation: arm 5s;
+  animation-delay: 9s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.car1 {
+  position: absolute;
+  bottom: 29%;
+  left: -200%;
+  animation: car1 12s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.car2 {
+  position: absolute;
+  bottom: 31%;
+  left: -200%;
+  animation: car2 17s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.car3 {
+  position: absolute;
+  bottom: 30%;
+  left: -200%;
+  animation: car3 19s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.car4 {
+  position: absolute;
+  bottom: 32%;
+  left: -200%;
+  animation: car4 21s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.w-message {
+  position: absolute;
+  width: 0;
+  bottom: 40%;
+  left: 10%;
+
+  animation: w-message 5s;
+  animation-delay: 5s;
+}
+
+.m-message {
+  position: absolute;
+  width: 0;
+  bottom: 50%;
+  left: 20%;
+
+  animation: m-message 7s;
+  animation-delay: 11s;
+}
+
+.t-message {
+  position: absolute;
+
+  width: 0;
+  bottom: 49%;
+  left: 29%;
+
+  animation: t-message 5s;
+  animation-delay: 16s;
+
+}
+
+.cloud1 {
+  position: absolute;
+
+  bottom: 85%;
+  left: 75%;
+}
+
+.cloud2 {
+  position: absolute;
+
+  bottom: 93%;
+  left: 60%;
+}
+
+.cloud3 {
+  position: absolute;
+
+  bottom: 92%;
+  left: 90%;
+}
+
+.cloud4 {
+  position: absolute;
+  left: 5%;
+  bottom: 87%;
+}
+
+.cloud5 {
+  position: absolute;
+
+  bottom: 92%;
+  left: 21%;
+}
+
+.cloud6 {
+  position: absolute;
+
+  bottom: 85%;
+  left: 40%;
+}
+
+.sun {
+  position: absolute;
+
+  bottom: 91%;
+  left: 80%;
+}
