@@ -1,10 +1,28 @@
 /* Footer  */
 
 .footer {
-    flex-wrap: wrap;
-}
+  flex-wrap: wrap;
+  padding: 100px 0 0 0;
+  max-width: 1400px;
 
-.footer-title {
+  &_bg {
+    background-color: #434343;
+  }
+
+  &__inside {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__coloms {
+    width: 33%;
+  }
+
+  &__title {
+
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
@@ -13,185 +31,162 @@
     border-bottom: 1px solid #666666;
 
     color: #AAAAAA;
-}
+  }
 
-.footer-left-link {
-    font-size: 16px;
-    line-height: 22px;
-
-    color: #FFFFFF;
-    margin-bottom: 0px;
-}
-
-.footer-left-link:hover {
-    opacity: 0.5;
-}
-
-.footer-left-link:active{
-    opacity: 0.2;
-}
-
-.footer-button {
-    max-width: 80px;
-
-}
-.input-size {
-    width: 300px;
-    height: 40px;
-    max-width: 300px;
-
-    color: #EBEBEB;
-    background-color: #666666 ;
-    border: none;
-
-
-}
-
-input::placeholder {
-    font-size: 16px;
-    line-height: 22px;
-
-    display: flex;
-    align-items: center;
-
-    color: #EBEBEB;;
-
-    padding: 9px 15px;
-}
-
-.bottom {
-    flex-wrap: wrap;
-    margin: 0 0;
-}
-
-.bottom-text {
-    font-size: 16px;
-    line-height: 22px;
-
-    color: #FFFFFF;
-}
-
-.bottom-link {
-    margin-right: 20px;
-    font-size: 16px;
-    line-height: 22px;
-
-    color: #A2A2A2;
-}
-
-.bottom-link:hover {
-    color: #FFFFFF;
-    text-decoration: underline;
-}
-
-.footer {
-    padding: 100px 0 0 0;
-    background-color: #434343;
-    max-width: 1400px;
-
-}
-
-.footer-bg {
-    background-color: #434343;
-}
-
-.footer-inside {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.line-block {
-    display: block;
-    width: 98%;
-}
-
-
-.star-box, .stars {
-    display: flex;
-}
-
-.footer-coloms {
-    width: 380px;
-}
-
-.footer-list {
+  &__list {
     padding: 0 0;
-    margin: 28px 0 ;
-}
+    margin: 28px 0;
+  }
 
-.footer-left-link {
+  &__link {
+    font-size: 16px;
+    line-height: 22px;
+
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
 
     color: #FFFFFF;
-}
+    transition: opacity 0.4s;
 
-.line-bottom {
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+  }
+
+  &__right {
+    margin-top: 25px;
+  }
+
+  &__input {
+    display: flex;
+  }
+
+  &__social {
+    display: flex;
+    margin-top: 25px;
+    padding: 0 0;
+  }
+
+  &__button {
+    max-width: 80px;
+  }
+
+  &__social-link {
+
+    margin-right: 10px;
+    transition: opacity 0.4s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+  }
+
+  &__line-bottom {
     display: flex;
     flex-wrap: wrap;
     padding: 23px 0;
 
     border-top: 1px solid #666666;
-}
+  }
 
-.full-line {
-    padding: 0 110px;
-}
-
-.footer-right {
-    margin-top: 25px;
-}
-
-.footer-input {
-    display: flex;
-
-}
-
-.social {
-    display: flex;
-    margin-top: 25px;
-    padding: 0 0;
-}
-
-.social-link {
-    margin-right: 10px ;
-}
-.social-link:hover {
-    opacity: 0.5;
-}
-.social-link:active {
-    opacity: 0.2;
-}
-
-.bottom {
+  &__bottom {
+    flex-wrap: wrap;
+    margin: 0 0;
     display: flex;
     padding: 0 0 100px 0;
     align-items: center;
     justify-content: start;
+  }
 
-}
+  &__rating-box {
+    display: flex;
+    margin-right: 170px;
+    max-width: 350px;
+  }
 
+  &__bottom-text {
+    font-size: 16px;
+    line-height: 22px;
 
-.star {
-    max-width: 17px;
-    max-height: 17px;
-    margin-right: 2.88px;
+    color: #FFFFFF;
 
-}
+    &_copirate {
+      margin-right: 115px;
+      max-width: 300px;
+    }
+  }
 
-.stars {
+  &__stars-box {
+    display: flex;
     align-items: center;
     padding: 0 0;
     margin-left: 25px;
+  }
+
+  &__star {
+    max-width: 17px;
+    max-height: 17px;
+    margin-right: 2.88px;
+  }
+
+  &__company-link {
+    margin-right: 20px;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #A2A2A2;
+    transition: color 0.4s;
+    &:hover {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+  }
+
 }
-.star-box {
-    margin-right: 170px;
-    max-width: 350px;
+
+
+
+.input-size {
+  width: 300px;
+  height: 40px;
+  max-width: 300px;
+
+  color: #EBEBEB;
+  background-color: #666666;
+  border: none;
+
+
 }
-.margin-copirate {
-    margin-right: 115px;
-    max-width: 300px;
+
+input::placeholder {
+  font-size: 16px;
+  line-height: 22px;
+
+  display: flex;
+  align-items: center;
+
+  color: #EBEBEB;;
+
+  padding: 9px 15px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
