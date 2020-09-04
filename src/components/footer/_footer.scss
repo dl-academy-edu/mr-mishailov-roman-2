@@ -1,20 +1,26 @@
+@import "../../components/mixins";
+@import "../../components/vars";
+
 /* Footer  */
 
 .footer {
   flex-wrap: wrap;
-  padding: 100px 0 0 0;
+  padding: 100px;
   max-width: 1400px;
+  @include media_interval($media_tablet, $media_desktop) {
+    max-width: 768px;
+    padding: 80px 60px;
+  }
 
   &_bg {
     background-color: #434343;
   }
 
   &__inside {
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+
   }
 
   &__coloms {
@@ -93,8 +99,7 @@
   &__line-bottom {
     display: flex;
     flex-wrap: wrap;
-    padding: 23px 0;
-
+    padding: 23px 0 0 0;
     border-top: 1px solid #666666;
   }
 
@@ -102,15 +107,16 @@
     flex-wrap: wrap;
     margin: 0 0;
     display: flex;
-    padding: 0 0 100px 0;
     align-items: center;
     justify-content: start;
+    padding: 0;
   }
 
   &__rating-box {
     display: flex;
     margin-right: 170px;
     max-width: 350px;
+
   }
 
   &__bottom-text {
@@ -118,66 +124,77 @@
     line-height: 22px;
 
     color: #FFFFFF;
-
-    &_copirate {
-      margin-right: 115px;
-      max-width: 300px;
+    @include media_interval($media_tablet, $media_desktop) {
+      margin-bottom: 15px;
+      margin-top: 15px;
     }
+      &_copirate {
+        margin-right: 115px;
+        max-width: 300px;
+        @include media_interval($media_tablet, $media_desktop) {
+          margin-right: 43px;
+        }
+      }
+
+    }
+
+    &__stars-box {
+      display: flex;
+      align-items: center;
+      padding: 0 0;
+      margin-left: 25px;
+    }
+
+    &__star {
+      max-width: 17px;
+      max-height: 17px;
+      margin-right: 2.88px;
+    }
+
+    &__company-link {
+      margin-right: 20px;
+      font-size: 16px;
+      line-height: 22px;
+      @include media_interval($media_tablet, $media_desktop) {
+        margin-right: 0px;
+      }
+      color: #A2A2A2;
+      transition: color 0.4s;
+
+      &:hover {
+        color: #FFFFFF;
+        text-decoration: underline;
+      }
+    }
+
   }
 
-  &__stars-box {
-    display: flex;
-    align-items: center;
-    padding: 0 0;
-    margin-left: 25px;
+
+  .input-size {
+    width: 300px;
+    height: 40px;
+    max-width: 300px;
+
+    color: #EBEBEB;
+    background-color: #666666;
+    border: none;
+    @include media_interval($media_tablet, $media_desktop) {
+      width: 133px;
+    }
+
   }
 
-  &__star {
-    max-width: 17px;
-    max-height: 17px;
-    margin-right: 2.88px;
-  }
-
-  &__company-link {
-    margin-right: 20px;
+  input::placeholder {
     font-size: 16px;
     line-height: 22px;
 
-    color: #A2A2A2;
-    transition: color 0.4s;
-    &:hover {
-      color: #FFFFFF;
-      text-decoration: underline;
-    }
+    display: flex;
+    align-items: center;
+
+    color: #EBEBEB;;
+
+    padding: 9px 15px;
   }
-
-}
-
-
-
-.input-size {
-  width: 300px;
-  height: 40px;
-  max-width: 300px;
-
-  color: #EBEBEB;
-  background-color: #666666;
-  border: none;
-
-
-}
-
-input::placeholder {
-  font-size: 16px;
-  line-height: 22px;
-
-  display: flex;
-  align-items: center;
-
-  color: #EBEBEB;;
-
-  padding: 9px 15px;
-}
 
 
 

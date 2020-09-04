@@ -3,7 +3,8 @@
 @import "./header/header";
 @import "./footer/footer";
 @import "./link-button/link-button";
-
+@import "../components/vars";
+@import "../components/mixins";
 body {
     font-family: 'Open Sans','Arial', sans-serif;
 }
@@ -38,16 +39,28 @@ ul {
     width: 1px !important;
     overflow: hidden;
 }
-
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+    @include media_interval($media_tablet,$media_desktop) {
+        max-width: 768px;
+        padding:0 60px;
+    }
+}
 
 /*apparel kids*/
 
 .category-list {
     display: flex;
-    flex-wrap: wrap;
+
     margin: 50px 0 0 0;
     padding: 0 0;
     justify-content: space-between;
+
+    @include media_interval($media_tablet,$media_desktop) {
+        margin-top: 24px;
+        overflow-x: auto;
+    }
 }
 
 .product {
@@ -56,13 +69,19 @@ ul {
     width: 280px;
     height: 270px;
 
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    @include media_interval($media_tablet,$media_desktop) {
+        min-width: 258px;
+        min-height: 249px;
+        margin-right: 20px;
+
+    }
 
 }
 .apparel-kids {
     background-image: url(static/images/apprel-kids.jpg);
+
 }
 .holiday {
     background-image:url(static/images/holyday-shop.jpg) ;

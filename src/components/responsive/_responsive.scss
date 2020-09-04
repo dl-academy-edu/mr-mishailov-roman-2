@@ -1,70 +1,109 @@
 .responsive {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    padding: 0;
-    justify-content: flex-end;
-    margin-top: 90px;
-}
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0;
+  justify-content: flex-end;
+  margin-top: 90px;
 
+  @include media_interval($media_tablet, $media_desktop) {
+    margin-top: 60px;
+    padding: 0 60px;
+  }
 
-.responsive-box {
+  &__box {
     box-sizing: border-box;
-    width: 480px;
+    width: 50%;
     margin-left: 120px;
+    @include media_interval($media_tablet, $media_desktop) {
+      margin-left: 56px;
+    }
+  }
 
-}
-
-.responsive-title {
+  &__title {
     margin-top: 30px;
 
-    font-family: 'Montserrat','Arial', sans-serif;
+    font-family: 'Montserrat', 'Arial', sans-serif;
     font-size: 38px;
     line-height: 46px;
 
     text-transform: uppercase;
 
     color: #1E0606;
-}
 
-.responsive-button {
-    font-family: 'Crimson Text','Georgia', serif;
+    @include media_interval($media_tablet, $media_desktop) {
+      margin-top: 30px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+
+
+  &__margin {
+    margin-left: -60px;
+
+    @include media_interval($media_tablet, $media_desktop) {
+      margin-left: -26px;
+    }
+
+  }
+
+  &__button {
+    font-family: 'Crimson Text', 'Georgia', serif;
     font-style: italic;
     font-size: 26px;
     line-height: 32px;
     text-transform: capitalize;
     text-align: left;
 
-    min-width: 326px;
-    min-height: 55px;
+    width: 326px;
+    height: 55px;
 
     padding: 11px 0 11px 60px;
 
     color: #1E0606;
     background-color: rgba(112, 187, 220, 0.2);
     border: none;
-}
-.woman {
-    max-height: 559px;
-}
 
-.margin-batton {
-    margin-left: -60px;
-}
+    @include media_interval($media_tablet, $media_desktop) {
+      font-size: 24px;
+      line-height: 30px;
+      max-width: 276px;
 
-.no-focus {
-    font-weight: normal;
-    background-color: white;
-}
+      padding: 15px 0 15px 20px;
+    }
 
-.responsive-text {
+    &_no-focus {
+      font-weight: normal;
+      background-color: white;
+    }
+  }
+
+  &__text {
     font-size: 16px;
     line-height: 22px;
 
     color: #1E0606;
     margin-top: 15px;
+    @include media_interval($media_tablet, $media_desktop) {
+      font-size: 14px;
+      line-height: 19px;
+
+    }
+  }
+
+  &__learn {
+    margin-top: 26px;
+
+    @include media_interval($media_tablet, $media_desktop) {
+      margin-top: 20px;
+    }
+
+  }
+
+  &__img {
+    width: 50%;
+  }
+
 }
 
-.responsive-learn {
-    margin-top: 15px;
-}
+

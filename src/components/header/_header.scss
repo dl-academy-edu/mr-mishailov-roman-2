@@ -1,9 +1,6 @@
-/* Header  */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
+@import "../../components/vars";
+@import "../../components/mixins";
+
 
 .header {
   display: flex;
@@ -11,6 +8,9 @@
   flex-wrap: wrap;
 
   padding-top: 50px;
+  @include media_interval($media_tablet, $media_desktop) {
+    padding-top: 25px;
+  }
 
   &__img {
 
@@ -68,6 +68,7 @@
     border: none;
     padding: 0 22px;
     transition: opacity 0.4s;
+
     &:hover {
       opacity: 50%;
     }

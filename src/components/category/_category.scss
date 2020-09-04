@@ -1,45 +1,60 @@
 .category {
-    padding: 0 0;
+  padding: 0 0;
+  @include media_interval($media_tablet, $media_desktop) {
+    padding: 0 60px;
+  }
 
-    &__title {
-        font-family: 'Montserrat','Arial', sans-serif;
-        font-size: 38px;
-        line-height: 46px;
-    
-        text-transform: uppercase;
-    
-        color: #1E0606;
-    
-        margin-top: 90px;
-        margin-bottom: 30px;
+  &__title {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-size: 38px;
+    line-height: 46px;
+
+    text-transform: uppercase;
+
+    color: #1E0606;
+
+    margin-top: 90px;
+    margin-bottom: 30px;
+    @include media_interval($media_tablet, $media_desktop) {
+      font-size: 36px;
+      line-height: 44px;
     }
+  }
 }
-
-.category-title {
-   
-}
-
 
 
 .slider-button {
-    display: flex;
-    margin-top: 30px;
+  display: flex;
+  margin-top: 33px;
+
 }
 
 .button-move {
-    border-color: transparent;
-    border: none;
-    background-color: white;
-    display: block;
-    margin: 0 6px 0 0;
+  border-color: transparent;
+  border: none;
+  background-color: white;
+  display: block;
+  margin: 0 6px 0 0;
 
-    padding: 0 0;
+  padding: 0 0;
 }
-
+.scroll_button {
+    @include media_interval($media_tablet, $media_desktop) {
+    max-width: 37px;
+    max-height: 37px;
+  }
+}
 .category-text {
-    font-size: 16px;
-    line-height: 22px;
+  font-size: 16px;
+  line-height: 22px;
 
-    color: #1E0606;
-    margin-left: 26px;
+  color: #1E0606;
+  margin-left: 26px;
+
+  @include media_interval($media_tablet, $media_desktop) {
+    font-size: 14px;
+    line-height: 19px;
+    margin: 0 auto;
+    margin-left: 20px;
+  }
 }

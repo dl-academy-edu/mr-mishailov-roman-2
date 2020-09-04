@@ -1,9 +1,12 @@
-
+@import "../../components/header/header";
 @import "../../components/poster/poster";
 @import "../../components/category/category";
 @import "../../components/responsive/responsive";
 @import "../../components/partners/partners";
 @import "../../components/bottom-container/bottom-container";
+@import "../../components/footer/footer";
+@import "../../components/vars";
+@import "../../components/mixins";
 
 .form-box {
     display: none;
