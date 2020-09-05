@@ -1,7 +1,10 @@
- <header class="header container">
+<!--add header-fixed-->
+<header class="menu-fixed_js">
+    <div class="header container header-fixed">
         <a href="/index.html">
-            <img class="header__img" src="/static/images/logo.svg" alt="DLK">
+            <img class="header__logo" src="/static/images/logo.svg" alt="DLK">
         </a>
+        <button class="header__menu menu-open_js ">MENU</button>
         <nav class="header__navigation">
             <ul class="header__list">
                 <li><a class="header__link" href="/pages/blog">Blog</a></li>
@@ -12,9 +15,17 @@
             </ul>
         </nav>
         <ul class="header__search">
-            <li><button class="header__search-button">
-                <img class="search-image" src="/static/images/search.svg" alt="search">
-            </button> </li>
-            <li><button class="header__search-contact button-contact_js">Contact  Us</button></li>
+            <li>
+                <button class="header__search-button">
+                    <img class="search-image" src="/static/images/search.svg" alt="search">
+                </button>
+            </li>
+            <li>
+                <button class="header__search-contact button-contact_js">Contact Us</button>
+            </li>
         </ul>
-    </header>
+    </div>
+</header>
+
+
+
