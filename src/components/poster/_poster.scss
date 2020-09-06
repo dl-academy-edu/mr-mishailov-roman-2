@@ -14,15 +14,24 @@
     max-width: 648px;
     padding-top: 0;
   }
+  @include media_interval('0', $media_tablet) {
+     margin: 0 auto;
+    max-width: 375px;
+    padding-top: 0;
+  }
 
   &__inside-box {
     background-color: #EEE4DB;
     display: flex;
-    flex-wrap: wrap;
     position: relative;
-    @include media_interval($media_tablet, $media_mobile) {
+    @include media_interval($media_mobile, $media_tablet) {
       max-width: 648px;
     }
+    @include media_interval('0', $media_tablet) {
+      max-width: 375px;
+      flex-direction: row-reverse;
+    }
+
   }
 
   &__left-box {
@@ -33,6 +42,11 @@
       margin-left: 0;
       margin-top: 17px;
       max-width: 60px;
+    }
+    @include media_interval('0',$media_tablet) {
+      margin-top: 21px;
+      margin-right: 20px;
+      margin-left: 0;
 
     }
   }
@@ -49,7 +63,7 @@
     max-width: 80px;
 
     color: rgba(30, 6, 6, 0.05);
-    @include media_interval($media_tablet, $media_desktop) {
+    @include media_interval('0', $media_desktop) {
       font-size: 48px;
       line-height: 59px;
       max-width: 60px;
@@ -72,7 +86,7 @@
     padding: 0 0;
 
     border: none;
-    @include media_interval($media_tablet, $media_desktop) {
+    @include media_interval('0', $media_desktop) {
       margin-top: 9.78px;
       width: 27px;
       height: 2.76px;
@@ -91,9 +105,11 @@
       margin-top: 76px;
       margin-left: 33px;
     }
+    @include media_interval('0', $media_tablet) {
+      margin-top: 80px;
+      margin-left: 20px;
+    }
   }
-
-
 }
 
 
@@ -106,6 +122,9 @@
 
   margin: 0 0;
   display: block;
+  @include media_interval('0', $media_tablet) {
+    font-size: 36px;
+  }
 }
 
 
@@ -118,7 +137,13 @@
     max-height: 286px;
     left: 255px;
     top: 77px;
-
+  }
+  @include media_interval('0', $media_tablet) {
+    max-width: 292px;
+    max-height: 226px;
+    right: 0;
+    top: 240px;
+    left: auto;
   }
 }
 
@@ -128,6 +153,9 @@
   flex-direction: column;
   max-width: 307px;
   padding-bottom: 89px;
+  @include media_interval('0', $media_tablet) {
+    padding-bottom: 188px;
+  }
 }
 
 
@@ -139,6 +167,9 @@
   line-height: 25px;
 
   color: #1E0606;
+  @include media_interval('0', $media_tablet) {
+
+  }
 }
 
 
@@ -159,5 +190,4 @@
 
   position: relative;
   z-index: 1;
-
 }

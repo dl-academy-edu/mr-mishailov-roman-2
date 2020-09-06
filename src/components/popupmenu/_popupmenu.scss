@@ -7,7 +7,8 @@
 
 .show-menu {
   display: block;
-   @include media_interval('0', $media_desktop) {
+  width: 100%;
+  @include media_interval('0', $media_desktop) {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -15,7 +16,7 @@
     left: 0;
     background-color: rgba(125, 151, 218, 0.8);
     z-index: 3;
-
+  }
 }
   .popup-menu {
 
@@ -28,12 +29,15 @@
     margin: 0 auto;
 
     position: fixed;
-    top: 73px;
+    top: 75px;
     bottom: 0;
     right: 0;
     left: 0;
     background-color: #FFFFFF;
     z-index: 10;
+    @include media_interval('0',$media_tablet) {
+
+    }
 
     &__list {
       display: flex;
@@ -73,5 +77,5 @@
       color: #1E0606;
     }
   }
-}
+
 

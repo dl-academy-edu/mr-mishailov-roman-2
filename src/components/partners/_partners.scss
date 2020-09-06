@@ -9,6 +9,12 @@
     margin: 60px auto;
     padding: 0 60px;
   }
+   @include media_interval('0', $media_tablet) {
+     margin: 0 auto;
+     margin-top: 50px;
+     margin-bottom: 0;
+     max-width: 375px;
+   }
 
   &__box {
     display: flex;
@@ -16,11 +22,18 @@
     margin: 0 auto;
     justify-content: space-between;
     align-items: baseline;
+    @include media_interval('0', $media_tablet) {
+      flex-wrap: wrap;
+    }
   }
 
   &__logo {
     @include media_interval($media_tablet,$media_desktop) {
       max-width: 20%;
+    }
+    @include media_interval('0',$media_tablet) {
+      max-width: 40%;
+      padding-top: 30px;
     }
 
     &:hover {

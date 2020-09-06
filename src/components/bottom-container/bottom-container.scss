@@ -13,6 +13,12 @@
     margin-bottom: 125px;
     padding: 0 60px;
   }
+  @include media_interval('0', $media_tablet) {
+    flex-wrap: wrap;
+
+    margin-top: 80px;
+    padding: 0;
+  }
 }
 
 .description {
@@ -24,6 +30,11 @@
   @include media_interval($media_tablet, $media_desktop) {
     min-width: 314px;
   }
+  @include media_interval('0', $media_tablet) {
+    min-width: 100%;
+    min-height: 0;
+    margin-top: 35px;
+  }
 
   &__margin-text {
     padding-left: 30px;
@@ -34,6 +45,11 @@
       padding-left: 15px;
       padding-bottom: 35px;
       margin-top: -18px;
+    }
+    @include media_interval('0', $media_tablet) {
+      padding-left: 20px;
+      padding-bottom: 25px;
+      margin-top: -15px;
     }
 
   }
@@ -52,6 +68,10 @@
       font-size: 30px;
       line-height: 37px;
     }
+    @include media_interval('0', $media_tablet) {
+      font-size: 24px;
+      line-height: 29px;
+    }
   }
 
   &__title-second {
@@ -69,6 +89,11 @@
       line-height: 32px;
       margin: 14px 0 10px 0;
     }
+    @include media_interval('0', $media_tablet) {
+      font-size: 24px;
+      line-height: 30px;
+      margin: 10px 0;
+    }
   }
 
   &__text {
@@ -80,8 +105,10 @@
 
     @include media_interval($media_tablet, $media_desktop) {
       max-width: 284px;
-
-
+    }
+    @include media_interval('0', $media_tablet) {
+      margin-top: 0;
+      margin-bottom: 15px;
     }
   }
 
@@ -89,16 +116,28 @@
     margin-left: 30px;
     position: absolute;
 
-     @include media_interval($media_tablet,$media_desktop) {
-    max-width: 284px;
-    margin-left: 15px;
+    @include media_interval($media_tablet, $media_desktop) {
+      max-width: 284px;
+      margin-left: 15px;
     }
   }
-
 }
+
+.about-button {
+  font-size: 14px;
+  line-height: 19px;
+  padding: 8px 20px;
+}
+
 .maps {
-  @include media_interval($media_tablet,$media_desktop) {
+  @include media_interval($media_tablet, $media_desktop) {
     max-width: 284px;
+  }
+  @include media_interval('0', $media_tablet) {
+    max-width: 335px;
+    position: absolute;
+    top: -30px;
+    right: -325px;
   }
 }
 

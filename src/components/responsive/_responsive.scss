@@ -9,6 +9,13 @@
     margin-top: 60px;
     padding: 0 60px;
   }
+  @include media_interval('0', $media_tablet) {
+    margin-top: 80px;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+
+  }
 
   &__box {
     box-sizing: border-box;
@@ -16,6 +23,11 @@
     margin-left: 120px;
     @include media_interval($media_tablet, $media_desktop) {
       margin-left: 56px;
+    }
+    @include media_interval('0', $media_tablet) {
+      width: 100%;
+      margin-left: 0;
+      order: 2;
     }
   }
 
@@ -35,6 +47,11 @@
       font-size: 36px;
       line-height: 44px;
     }
+    @include media_interval('0', $media_tablet) {
+      margin-top: 20px;
+      font-size: 24px;
+      line-height: 29px;
+    }
   }
 
 
@@ -43,6 +60,9 @@
 
     @include media_interval($media_tablet, $media_desktop) {
       margin-left: -26px;
+    }
+    @include media_interval('0', $media_tablet) {
+      margin-left: 0;
     }
 
   }
@@ -71,6 +91,13 @@
 
       padding: 15px 0 15px 20px;
     }
+    @include media_interval('0', $media_tablet) {
+      font-size: 24px;
+      line-height: 30px;
+      max-width: 267px;
+      padding: 8px 20px 7px 20px;
+      font-weight: bold;
+    }
 
     &_no-focus {
       font-weight: normal;
@@ -87,7 +114,9 @@
     @include media_interval($media_tablet, $media_desktop) {
       font-size: 14px;
       line-height: 19px;
-
+    }
+    @include media_interval('0', $media_tablet) {
+      margin-top: 13px;
     }
   }
 
@@ -97,11 +126,22 @@
     @include media_interval($media_tablet, $media_desktop) {
       margin-top: 20px;
     }
-
+    @include media_interval('0', $media_tablet) {
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 19px;
+      padding: 8px 20px;
+      max-width: 132px;
+    }
   }
 
   &__img {
     width: 50%;
+    @include media_interval('0', $media_tablet) {
+      width: 100%;
+      padding: 0 20px;
+      order: 1;
+    }
   }
 
 }

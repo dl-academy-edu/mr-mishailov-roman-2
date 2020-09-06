@@ -4,12 +4,15 @@
 .header-fixed {
 
   @include media_interval('0', $media_desktop) {
-    display: block;
+    display: flex;
     width: 100%;
     position: fixed;
     z-index: 4;
     background-color: #ffffff;
+    margin: 0 auto;
+    padding: 0;
   }
+
 
 }
 
@@ -18,19 +21,25 @@
   align-items: center;
   flex-wrap: wrap;
   position: relative;
-
   padding-top: 50px;
-  @include media_interval('0', $media_desktop) {
-    display: flex;
-    align-items: center;
-    padding-top: 25px;
+
+  @include media_interval($media_tablet, $media_desktop) {
+    padding-top: 35px;
     justify-content: space-between;
     padding-bottom: 35px;
+  }
+  @include media_interval('0', $media_tablet) {
+    padding-top: 25px;
+    justify-content: space-between;
+    padding-bottom: 25px;
   }
 
   &__logo {
     @include media_interval($media_tablet, $media_desktop) {
       width: 62px;
+    }
+    @include media_interval('0',$media_tablet) {
+      width: 42px;
     }
 
     &:hover {
@@ -148,13 +157,14 @@
       padding: 0;
     }
 
-   }
+  }
+
   &__menu-close {
-     font-size: 0;
-     line-height: 0;
-     background-image: url("../../static/images/close-menu.svg");
-     width: 16px;
-     height: 16px;
+    font-size: 0;
+    line-height: 0;
+    background-image: url("../../static/images/close-menu.svg");
+    width: 16px;
+    height: 16px;
   }
 }
 

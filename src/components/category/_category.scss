@@ -3,6 +3,9 @@
   @include media_interval($media_tablet, $media_desktop) {
     padding: 0 60px;
   }
+  @include media_interval('0', $media_tablet) {
+    padding: 0 20px;
+  }
 
   &__title {
     font-family: 'Montserrat', 'Arial', sans-serif;
@@ -18,6 +21,12 @@
     @include media_interval($media_tablet, $media_desktop) {
       font-size: 36px;
       line-height: 44px;
+    }
+    @include media_interval('0', $media_tablet) {
+      margin-top: 80px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      line-height: 29px;
     }
   }
 }
@@ -37,13 +46,24 @@
   margin: 0 6px 0 0;
 
   padding: 0 0;
+  @include media_interval('0', $media_tablet) {
+    margin: 0 5px 0 0;
+    flex-direction: column;
+  }
 }
+
 .scroll_button {
-    @include media_interval($media_tablet, $media_desktop) {
+  @include media_interval($media_tablet, $media_desktop) {
     max-width: 37px;
     max-height: 37px;
   }
+  @include media_interval('0', $media_tablet) {
+    max-width: 33px;
+    max-height: 33px;
+
+  }
 }
+
 .category-text {
   font-size: 16px;
   line-height: 22px;
@@ -56,5 +76,10 @@
     line-height: 19px;
     margin: 0 auto;
     margin-left: 20px;
+  }
+  @include media_interval('0', $media_tablet) {
+    font-size: 14px;
+    line-height: 19px;
+    margin: 0 auto;
   }
 }
