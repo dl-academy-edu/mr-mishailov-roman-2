@@ -1,20 +1,44 @@
+@import "../../components/vars";
+@import "../../components/mixins";
+
+
 .partners {
-    margin: 90px auto;
-    padding: 0 0;
-}
-.partners-box {
+  margin: 90px auto;
+  padding: 0 0;
+  @include media_interval($media_tablet, $media_desktop) {
+    margin: 60px auto;
+    padding: 0 60px;
+  }
+   @include media_interval('0', $media_tablet) {
+     margin: 0 auto;
+     margin-top: 50px;
+     margin-bottom: 0;
+     max-width: 375px;
+   }
+
+  &__box {
     display: flex;
-    flex-wrap: wrap;
     padding: 0 0;
     margin: 0 auto;
     justify-content: space-between;
     align-items: baseline;
+    @include media_interval('0', $media_tablet) {
+      flex-wrap: wrap;
+    }
+  }
 
+  &__logo {
+    @include media_interval($media_tablet,$media_desktop) {
+      max-width: 20%;
+    }
+    @include media_interval('0',$media_tablet) {
+      max-width: 40%;
+      padding-top: 30px;
+    }
+
+    &:hover {
+      opacity: 50%;
+    }
+  }
 }
 
-.partners-logo {
-    padding-top: 50px;
-}
-.partners-logo:hover {
-    opacity: 50%;
-}

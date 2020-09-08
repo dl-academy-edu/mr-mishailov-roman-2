@@ -1,124 +1,193 @@
+@import "../../components/vars";
+@import "../../components/mixins";
+
 .poster {
-    max-width: 1200px;
-    margin: 40px auto 0;
-    padding-top: 89px ;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding-top: 89px;
 
-    background-repeat: no-repeat;
-    background-position: 455px;
-    &__inside-box {
-        background-color: #EEE4DB;
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
+  background-repeat: no-repeat;
+  background-position: 455px;
 
+  @include media_interval($media_tablet, $media_desktop) {
+    margin: 0 auto;
+    max-width: 648px;
+    padding-top: 0;
+  }
+  @include media_interval('0', $media_tablet) {
+     margin: 0 auto;
+    max-width: 375px;
+    padding-top: 0;
+  }
+
+  &__inside-box {
+    background-color: #EEE4DB;
+    display: flex;
+    position: relative;
+    @include media_interval($media_mobile, $media_tablet) {
+      max-width: 648px;
+    }
+    @include media_interval('0', $media_tablet) {
+      max-width: 375px;
+      flex-direction: row-reverse;
     }
 
-    &__left-box {
-        margin-left: 28px;
-        margin-top: 17px;
-        max-width: 80px;
+  }
+
+  &__left-box {
+    margin-left: 28px;
+    margin-top: 17px;
+    max-width: 80px;
+    @include media_interval($media_tablet, $media_desktop) {
+      margin-left: 0;
+      margin-top: 17px;
+      max-width: 60px;
     }
-    &__rectungle-num {
-        font-family: 'Montserrat','Arial', sans-serif;
-        font-weight: 300;
-        font-size: 60px;
-        line-height: 73px;
-        text-transform: uppercase;
+    @include media_interval('0',$media_tablet) {
+      margin-top: 21px;
+      margin-right: 20px;
+      margin-left: 0;
 
-        margin: 0 0;
-        display: block;
-        max-width: 80px;
-
-        color: rgba(30, 6, 6, 0.05); 
-        }
-    &__rectangle {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 0 auto;
-        padding: 0 0;
     }
-    &__rec-button {
-        margin-top: 11px;
-        width: 31px;
-        height: 3px;
-        background-color: #D6CAC2;
-        padding: 0 0;
-        
-        border: none;
-        &:hover {    
-            background-color: #725F5B;
-            cursor: pointer;
-            }
-    }
-    &__middle {
-        margin-top: 89px;
-        margin-left: 44px;
-    }
+  }
 
-
-} 
-
-
-
-.poster-title {
-    font-family: 'Montserrat','Arial', sans-serif; 
-    font-size: 40px;
-    line-height: 110%;
-
-    color: #1E0606;
+  &__rectungle-num {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 73px;
+    text-transform: uppercase;
 
     margin: 0 0;
     display: block;
+    max-width: 80px;
+
+    color: rgba(30, 6, 6, 0.05);
+    @include media_interval('0', $media_desktop) {
+      font-size: 48px;
+      line-height: 59px;
+      max-width: 60px;
+    }
+  }
+
+  &__rectangle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 0 0;
+  }
+
+  &__rec-button {
+    margin-top: 11px;
+    width: 31px;
+    height: 3px;
+    background-color: #D6CAC2;
+    padding: 0 0;
+
+    border: none;
+    @include media_interval('0', $media_desktop) {
+      margin-top: 9.78px;
+      width: 27px;
+      height: 2.76px;
+    }
+
+    &:hover {
+      background-color: #725F5B;
+      cursor: pointer;
+    }
+  }
+
+  &__middle {
+    margin-top: 89px;
+    margin-left: 44px;
+    @include media_interval($media_tablet, $media_desktop) {
+      margin-top: 76px;
+      margin-left: 33px;
+    }
+    @include media_interval('0', $media_tablet) {
+      margin-top: 80px;
+      margin-left: 20px;
+    }
+  }
+}
+
+
+.poster-title {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 40px;
+  line-height: 110%;
+
+  color: #1E0606;
+
+  margin: 0 0;
+  display: block;
+  @include media_interval('0', $media_tablet) {
+    font-size: 36px;
+  }
 }
 
 
 .poster-img {
-    position: absolute;
-    left: 455px;
-    top: -89px;
-
+  position: absolute;
+  left: 455px;
+  top: -89px;
+  @include media_interval($media_tablet, $media_desktop) {
+    max-width: 385px;
+    max-height: 286px;
+    left: 255px;
+    top: 77px;
+  }
+  @include media_interval('0', $media_tablet) {
+    max-width: 292px;
+    max-height: 226px;
+    right: 0;
+    top: 240px;
+    left: auto;
+  }
 }
 
 
 .middle-content {
-    display: flex;
-    flex-direction: column;
-    max-width: 307px;
-    padding-bottom: 89px;
+  display: flex;
+  flex-direction: column;
+  max-width: 307px;
+  padding-bottom: 89px;
+  @include media_interval('0', $media_tablet) {
+    padding-bottom: 188px;
+  }
 }
 
 
-
-
-
 .poster-text {
-    font-family: 'Crimson Text','Arial', serif;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 25px;
+  font-family: 'Crimson Text', 'Arial', serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
 
-    color: #1E0606;
+  color: #1E0606;
+  @include media_interval('0', $media_tablet) {
+
+  }
 }
 
 
 .poster-footer-text {
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 16px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
 
-    text-transform: uppercase;
-    text-align: center;
+  text-transform: uppercase;
+  text-align: center;
 
-    color: #FFFFFF;
-    background-color:#C29974; /* временный фон*/
+  color: #FFFFFF;
+  background-color: #C29974; /* временный фон*/
 
-    display: block;
-    margin: 0 auto;
-    padding: 11px;
+  display: block;
+  margin: 0 auto;
+  padding: 11px;
 
-    position: relative;
-    z-index: 1;
-    
+  position: relative;
+  z-index: 1;
 }

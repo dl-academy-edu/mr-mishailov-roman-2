@@ -1,18 +1,46 @@
-/* Header  */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px;
+@import "../../components/vars";
+@import "../../components/mixins";
+
+.header-fixed {
+
+  @include media_interval('0', $media_desktop) {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    z-index: 4;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+
 }
 
 .header {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-
+  position: relative;
   padding-top: 50px;
 
-  &__img {
+  @include media_interval($media_tablet, $media_desktop) {
+    padding-top: 35px;
+    justify-content: space-between;
+    padding-bottom: 35px;
+  }
+  @include media_interval('0', $media_tablet) {
+    padding-top: 25px;
+    justify-content: space-between;
+    padding-bottom: 25px;
+  }
+
+  &__logo {
+    @include media_interval($media_tablet, $media_desktop) {
+      width: 62px;
+    }
+    @include media_interval('0',$media_tablet) {
+      width: 42px;
+    }
 
     &:hover {
       opacity: 50%;
@@ -28,13 +56,19 @@
     display: flex;
     margin-left: 20px;
     flex-wrap: wrap;
+
+    @include media_interval('0', $media_desktop) {
+      display: none;
+    }
   }
+
 
   &__list {
 
     display: flex;
     margin-left: 20px;
     flex-wrap: wrap;
+
   }
 
   &__link {
@@ -60,6 +94,9 @@
     margin-left: auto;
     margin-bottom: 0;
     margin-top: 0;
+    @include media_interval('0', $media_desktop) {
+      padding: 0;
+    }
   }
 
 
@@ -68,6 +105,7 @@
     border: none;
     padding: 0 22px;
     transition: opacity 0.4s;
+
     &:hover {
       opacity: 50%;
     }
@@ -89,6 +127,10 @@
     transition: opacity 0.4s;
     color: #1E0606;
 
+    @include media_interval('0', $media_desktop) {
+      display: none;
+    }
+
     &:hover {
       opacity: 50%;
     }
@@ -97,8 +139,33 @@
       opacity: 25%;
     }
   }
+
+  &__menu {
+    display: none;
+    @include media_interval('0', $media_desktop) {
+      display: block;
+
+      font-family: Open Sans;
+      font-size: 14px;
+      line-height: 19px;
+      align-items: center;
+      color: #1E0606;
+      margin-left: auto;
+
+      border: none;
+      background-color: transparent;
+      padding: 0;
+    }
+
+  }
+
+  &__menu-close {
+    font-size: 0;
+    line-height: 0;
+    background-image: url("../../static/images/close-menu.svg");
+    width: 16px;
+    height: 16px;
+  }
 }
-
-
 
 
