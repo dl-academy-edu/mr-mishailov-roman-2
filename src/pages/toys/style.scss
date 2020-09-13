@@ -3,227 +3,240 @@
 @import "../../components/footer/footer";
 @import "../../components/popupmenu/popupmenu";
 
+
 .contact-us-title {
-    font-family: 'Montserrat','Arial', sans-serif;
-    font-weight: bold;
-    font-size: 40px;
-    color:  #1E0606 ;
-    text-transform: uppercase;
-    
-    margin-top: 60px;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: #1E0606;
+  text-transform: uppercase;
+
+  margin-top: 60px;
+  margin-bottom: 15px;
+
+  @include media_interval($media_tablet, $media_desktop) {
+    font-size: 36px;
+    line-height: 44px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+  }
+  @include media_interval('0', $media_tablet) {
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 1px;
     margin-bottom: 15px;
-   
+  }
+
 }
 
 .nav-link {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  padding: 0 0;
+  margin: 0 0;
+  align-items: end;
 
-    padding: 0 0;
-    margin: 0 0;
-
-    align-items: center;
 }
 
 .nav-margin {
-    margin-right: 20px;
+  margin-right: 20px;
+
+  @include media_interval('0', $media_desktop) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .link-text {
-    font-family: 'Crimson Text','Georgia', serif;
-    font-style: italic;
-    font-size: 20px;
-    line-height: 25px;
-    color: #1E0606;
-}
-.text-finish {
-    opacity: 50%;
-}
-
-/* Category products */
-
-
-
-
-.bottom-section {
-    display: block;
-    width: 680px;
-    padding: 0 0;
-    margin: 17px 410px 60px 200px;
-}
-
-.bottom-title {
-    font-family: 'Montserrat','Arial', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 38px;
-    line-height: 46px;
-
-    text-transform: uppercase;
-
-    color: #1E0606;
-    margin-top: 17px;
-    margin-bottom: 25px;
-}
-
-.description-text {
-    margin-top: 15px;
-
+  font-family: 'Crimson Text', 'Georgia', serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 25px;
+  color: #1E0606;
+  @include media_interval('0', $media_tablet) {
     font-size: 16px;
-    line-height: 22px;
-
-    color: #1E0606;
+    line-height: 20px;
+  }
 }
- 
+
+.text-finish {
+  opacity: 50%;
+}
+
+
 /* input container */
 .search-bg {
-    background-color:  rgba(125, 151, 218, 0.2);
+  background-color: rgba(125, 151, 218, 0.2);
 }
+
 .toys-search {
-    max-width: 1400px;
+  max-width: 1400px;
 
-    margin: 0 auto;
-    padding: 0 0;
+  margin: 0 auto;
+  padding: 0 0;
 
-    margin-top: 50px;
-    margin-bottom: 60px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  @include media_interval($media_tablet, $media_desktop) {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  @include media_interval('0', $media_tablet) {
+    max-width: 375px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
 }
-
 
 .field-direction {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 42px 110px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 42px 110px;
+  @include media_interval($media_tablet, $media_desktop) {
+    padding: 30px 60px;
+  }
+  @include media_interval('0', $media_tablet) {
+    padding: 25px 20px;
+  }
 }
 
 .search-box {
-    border: none;
-    padding: 0 0;
+  border: none;
+  padding: 0 0;
 }
 
 .cost-box {
-    width: 200px;
-}
-.range-cost {
-    min-width: 188px;
-    margin-top: 25px;
+  width: 200px;
+
 }
 
-.colors{
-    padding: 0 0;
+.range-cost {
+  min-width: 188px;
+  margin-top: 25px;
+  @include media_interval('0', $media_desktop) {
+    width: 184px;
+  }
+}
+
+.colors {
+  padding: 0 0;
 }
 
 .delivery {
-    padding: 0 0;
-
+  padding: 0 0;
 }
 
 .amount-list {
-    list-style-type: none;
-    padding: 0 0;
-    display: flex;
+  list-style-type: none;
+  padding: 0 0;
+  display: flex;
 }
-.search-title {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 22px;
 
-    color: #1E0606;
+.search-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #1e0606;
+  @include media_interval('0', $media_tablet) {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
 
 .range-box {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .range-num {
+  font-size: 16px;
+  line-height: 22px;
 
-    font-size: 16px;
-    line-height: 22px;
-
-    color: #1E0606;
+  color: #1e0606;
+  @include media_interval('0', $media_tablet) {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
+
 .input-checkbox-checker {
-    position: absolute;
-    display: block;
-    border: 2px solid #C29974;
-    box-sizing: border-box;
-    border-radius: 3px;;
-    
-    width: 19px;
-    height: 19px;
+  position: absolute;
+  display: block;
+  border: 2px solid #c29974;
+  box-sizing: border-box;
+  border-radius: 3px;
 
-    align-items: center;
+  width: 19px;
+  height: 19px;
+
+  align-items: center;
 }
 
+.input-checkbox:checked ~ .input-checkbox-checker::before {
+  content: "";
 
-.input-checkbox:checked ~.input-checkbox-checker::before {
-    content: "";
+  position: absolute;
+  display: inline-block;
 
-    position: absolute;
-    display: inline-block;
-    
+  width: 19px;
+  height: 19px;
 
-    width: 19px;
-    height: 19px;
-
-    background-image: url(/static/images/Group.svg);
-    background-repeat: no-repeat;
-    background-position: left top;
-    top: -2px;
-    left: -2px;
-
-
+  background-image: url(../../static/images/Group.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  top: -2px;
+  left: -2px;
 }
 
 .bracket {
-    padding-bottom: 4px;
+  padding-bottom: 4px;
 }
 
 .input-lable-checkbox, .input-lable-rad {
-    margin-bottom: 15px;
-    padding-left: 29px;
+  margin-bottom: 15px;
+  padding-left: 29px;
 
-    font-size: 16px;
-    line-height: 22px;
+  font-size: 16px;
+  line-height: 22px;
 
-    color: #1E0606;
-    cursor: pointer;
+  color: #1e0606;
+  cursor: pointer;
+  @include media_interval('0', $media_tablet) {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
-
-.input-lable-rad {
+  .input-lable-rad {
     margin-bottom: 10px;
-    padding-left:  30px; 
+    padding-left: 30px;
+  }
 
-}
-
-
-.color-lable {
+  .color-lable {
     display: flex;
     flex-direction: row;
-}
-.delivery-lable {
+  }
+
+  .delivery-lable {
     display: flex;
     flex-direction: row;
-}
+  }
 
-
-.input-checkbox-circle {
+  .input-checkbox-circle {
     position: absolute;
 
     display: block;
-    
-    border: 2px solid #C29974;
+
+    border: 2px solid #c29974;
     box-sizing: border-box;
     border-radius: 50%;
     width: 20px;
     height: 20px;
 
     align-items: center;
-}
+  }
 
-.rad-checker:checked ~ .input-checkbox-circle::before {
+  .rad-checker:checked ~ .input-checkbox-circle::before {
     content: "";
     position: absolute;
     top: 3px;
@@ -231,11 +244,11 @@
     bottom: 3px;
     left: 3px;
 
-    background-color: #C29974;
+    background-color: #c29974;
     border-radius: 50%;
-}
+  }
 
-.things-list {
+  .things-list {
     display: flex;
 
     flex-wrap: wrap;
@@ -243,120 +256,123 @@
 
     padding: 0 0;
     margin-top: 0;
-}
+  }
 
-.thing {
+  .thing {
     display: flex;
     flex-direction: column;
     width: 380px;
     align-items: center;
     margin-top: 45px;
-}
+  }
 
-.thing-title {
+  .thing-title {
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 19px;
 
-    color: #1E0606;
-}
+    color: #1e0606;
+  }
 
-.thing-cost {
+  .thing-cost {
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
 
-    color: #1E0606;
-}
+    color: #1e0606;
+  }
 
-.amount-button {
+  .amount-button {
     display: block;
 
     padding-top: 7px;
     padding-bottom: 7px;
 
-    height:35px;
+    height: 35px;
     width: 80px;
     border: none;
 
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 
     text-align: center;
 
     font-size: 16px;
     line-height: 22px;
 
-    color: #1E0606;
+    color: #1e0606;
 
     cursor: pointer;
-}
-.amount-button:active {
-    background-color: #EDDEEB;
-}
+    @include media_interval('0', $media_tablet) {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
 
-.amount-button-list:checked~.amount-button {
-    background-color: #F3D0DB;
-}
+  .amount-button:active {
+    background-color: #eddeeb;
+  }
 
-.form-button {
+  .amount-button-list:checked ~ .amount-button {
+    background-color: #f3d0db;
+  }
+
+  .form-button {
     height: 40px;
     margin-top: 37px;
-}
+  }
 
-
-/* Input range  */
-input[type=range] {
+  /* Input range  */
+  input[type="range"] {
     -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
     width: 100%; /* Specific width is required for Firefox. */
     background: transparent; /* Otherwise white in Chrome */
   }
 
-input[type=range]::-webkit-slider-thumb {
+  input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
   }
-  
-input[type=range]:focus {
+
+  input[type="range"]:focus {
     outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
   }
-  
-input[type=range]::-ms-track {
+
+  input[type="range"]::-ms-track {
     width: 100%;
     cursor: pointer;
-  
+
     /* Hides the slider so custom styles can be added */
-    background: transparent; 
+    background: transparent;
     border-color: transparent;
     color: transparent;
   }
 
-/* Add style thumb */
+  /* Add style thumb */
 
-input[type=range]::-webkit-slider-thumb {
+  input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    border: 8px solid #C29974;
+    border: 8px solid #c29974;
     height: 24px;
     width: 24px;
     border-radius: 50%;
     background: #ffffff;
     cursor: pointer;
-    margin-top: -10px; 
-    
+    margin-top: -10px;
   }
-  
+
   /* All the same stuff for Firefox */
-input[type=range]::-moz-range-thumb {
-    border: 8px solid #C29974;
+  input[type="range"]::-moz-range-thumb {
+    border: 8px solid #c29974;
     height: 24px;
     width: 24px;
     border-radius: 50%;
     background: #ffffff;
     cursor: pointer;
   }
-  
+
   /* All the same stuff for IE */
-input[type=range]::-ms-thumb {
-    border: 8px solid #C29974;
+  input[type="range"]::-ms-thumb {
+    border: 8px solid #c29974;
     height: 24px;
     width: 24px;
     border-radius: 50%;
@@ -366,25 +382,21 @@ input[type=range]::-ms-thumb {
 
   /* add track  */
 
-
-  input[type=range]::-webkit-slider-runnable-track {
+  input[type="range"]::-webkit-slider-runnable-track {
     width: 188px;
     height: 4px;
     cursor: pointer;
-    background:#000000; 
-
+    background: #000000;
   }
 
-  
-  input[type=range]::-moz-range-track {
+  input[type="range"]::-moz-range-track {
     width: 188px;
     height: 4px;
     cursor: pointer;
-    background:#000000; 
-
+    background: #000000;
   }
-  
-  input[type=range]::-ms-track {
+
+  input[type="range"]::-ms-track {
     width: 188px;
     height: 4px;
     cursor: pointer;
@@ -394,19 +406,18 @@ input[type=range]::-ms-thumb {
     color: transparent;
   }
 
-  input[type=range]::-ms-fill-lower {
-    background:#000000; 
-
-  }
-  input[type=range]:focus::-ms-fill-lower {
-    background:#C29974;
-  }
-  input[type=range]::-ms-fill-upper {
-    background:#000000; 
+  input[type="range"]::-ms-fill-lower {
+    background: #000000;
   }
 
-  input[type=range]:focus::-ms-fill-upper {
-    background:#C29974;
-}
+  input[type="range"]:focus::-ms-fill-lower {
+    background: #c29974;
+  }
 
+  input[type="range"]::-ms-fill-upper {
+    background: #000000;
+  }
 
+  input[type="range"]:focus::-ms-fill-upper {
+    background: #c29974;
+  }

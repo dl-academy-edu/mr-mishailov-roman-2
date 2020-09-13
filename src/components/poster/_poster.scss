@@ -11,8 +11,8 @@
 
   @include media_interval($media_tablet, $media_desktop) {
     margin: 0 auto;
-    max-width: 648px;
-    padding-top: 0;
+    max-width: 100%;
+    padding: 0 60px;
   }
   @include media_interval('0', $media_tablet) {
      margin: 0 auto;
@@ -135,8 +135,9 @@
   @include media_interval($media_tablet, $media_desktop) {
     max-width: 385px;
     max-height: 286px;
-    left: 255px;
-    top: 77px;
+    left: unset;
+    right: 8px;
+    top: 80px;
   }
   @include media_interval('0', $media_tablet) {
     max-width: 292px;

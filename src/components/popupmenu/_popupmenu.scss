@@ -3,7 +3,7 @@
 
 .bg-menu {
   display: none;
-  }
+}
 
 .show-menu {
   display: block;
@@ -18,64 +18,67 @@
     z-index: 3;
   }
 }
-  .popup-menu {
 
-    display: flex;
-    flex-direction: column;
+.popup-menu {
 
-    width: 375px;
-    height: 348px;
-    padding: 25px 0;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 
-    position: fixed;
-    top: 75px;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: #FFFFFF;
-    z-index: 10;
-    @include media_interval('0',$media_tablet) {
+  width: 375px;
+  height: 348px;
+  padding: 25px 0;
+  margin: 0 auto;
 
-    }
+  position: fixed;
+  top: 75px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  z-index: 10;
 
-    &__list {
-      display: flex;
-      margin: 0 auto;
-      flex-direction: column;
-      list-style-type: none;
-      padding: 0;
-    }
-
-    &__margin-link {
-      display: flex;
-      min-width: 110px;
-      margin-bottom: 20px;
-      justify-content: center;
-
-    }
-
-    &__link {
-      font-family: Open Sans;
-      font-size: 16px;
-      line-height: 22px;
-      text-transform: uppercase;
-
-      color: #1E0606;
-    }
-
-    &__search-contact {
-      border: none;
-      background-color: transparent;
-      margin-top: 15px;
-
-      font-family: Open Sans;
-
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 22px;
-      color: #1E0606;
-    }
+  @include media_interval($media_tablet, $media_desktop) {
+  padding: 55px 0;
+  height: 378px;
   }
+
+  &__list {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__margin-link {
+    display: flex;
+    min-width: 110px;
+    margin-bottom: 20px;
+    justify-content: center;
+
+  }
+
+  &__link {
+
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+
+    color: #1E0606;
+  }
+
+  &__search-contact {
+    border: none;
+    background-color: transparent;
+    margin-top: 15px;
+
+
+
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1E0606;
+  }
+}
 
 

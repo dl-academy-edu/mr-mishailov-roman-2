@@ -14,6 +14,19 @@
   margin-top: 60px;
   margin-bottom: 15px;
 
+  @include media_interval($media_tablet, $media_desktop) {
+    font-size: 36px;
+    line-height: 44px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+  }
+  @include media_interval('0', $media_tablet) {
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 1px;
+    margin-bottom: 15px;
+  }
+
 }
 
 .nav-link {
@@ -26,6 +39,9 @@
 
 .nav-margin {
   margin-right: 20px;
+  @include media_interval('0', $media_tablet) {
+    margin-top: 14px;
+  }
 }
 
 .link-text {
@@ -34,6 +50,10 @@
   font-size: 20px;
   line-height: 25px;
   color: #1E0606;
+  @include media_interval('0', $media_tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .text-finish {
@@ -48,57 +68,124 @@
   flex-wrap: wrap;
   padding: 0 0;
   justify-content: flex-start;
+  margin-top: 27px;
+  margin-bottom: 0;
+  @include media_interval($media_tablet, $media_desktop) {
+    margin-top: 10px;
+  }
+  @include media_interval('0', $media_tablet) {
+    margin-top: 4px;
+  }
 
   &__thing {
-    margin: 50px 20px 33px 20px;
+    margin: 23px 20px 0 0;
     padding: 0 0;
 
+    min-width: 280px;
+    min-height: 270px;
 
     justify-content: center;
     align-items: center;
+    @include media_interval($media_tablet, $media_desktop) {
+      margin-top: 20px;
+      min-width: 203px;
+      min-height: 196px;
+
+
+    }
+    @include media_interval('0', $media_tablet) {
+      margin: 16px 16px 0 0;
+      min-width: 160px;
+      min-height: 154px;
+
+    }
+  }
+
+  &__text {
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    @include media_interval($media_tablet, $media_desktop) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+    @include media_interval('0', $media_tablet) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 }
 
-.thing {
-
-}
-
-
-.child {
-  margin-right: 20px;
-  margin-bottom: 33px;
-}
-
-ul.products li:nth-child(4) {
+ul.products li:nth-child(4n) {
   margin-left: 200px;
+  @include media_interval('0', $media_desktop) {
+    margin-left: 0;
+  }
+  @include media_interval('0', $media_tablet) {
+    margin-left: unset;
+  }
 }
 
-.bottom-section {
+//ul.products li:nth-child(3n) {
+//  @include media_interval('0', $media_desktop) {
+//    margin-right: 0;
+//  }
+//}
+
+
+.description {
   display: block;
-  width: 680px;
-  padding: 0 0;
-  margin: 17px 410px 60px 200px;
+
+  padding: 60px 0;
+  margin: 0 410px 0 200px;
+  @include media_interval($media_tablet, $media_desktop) {
+    margin: 0;
+    padding: 40px 0;
+  }
+  @include media_interval('0', $media_tablet) {
+    margin: 0;
+    padding: 30px 0;
+  }
+
+  &__title {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 46px;
+
+    text-transform: uppercase;
+
+    color: #1E0606;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    @include media_interval($media_tablet, $media_desktop) {
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 20px;
+    }
+    @include media_interval('0', $media_tablet) {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    margin-top: 15px;
+
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #1E0606;
+  }
+
+  @include media_interval('0', $media_desktop) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
 }
 
-.bottom-title {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 46px;
-
-  text-transform: uppercase;
-
-  color: #1E0606;
-  margin-top: 17px;
-  margin-bottom: 25px;
-}
-
-.description-text {
-  margin-top: 15px;
-
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #1E0606;
-}

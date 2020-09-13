@@ -156,6 +156,7 @@
     max-width: 350px;
     @include media_interval('0', $media_tablet) {
       margin-right: 0;
+      width: 100%;
     }
   }
 
@@ -178,6 +179,7 @@
       max-width: 300px;
       @include media_interval($media_tablet, $media_desktop) {
         margin-right: 43px;
+        width: 100%;
       }
       @include media_interval('0', $media_tablet) {
         margin-right: 0;
@@ -190,7 +192,7 @@
   &__stars-box {
     display: flex;
     align-items: center;
-    padding: 0 0;
+    padding: 0;
     margin-left: 25px;
     @include media_interval('0', $media_tablet) {
       align-items: flex-end;
@@ -202,7 +204,11 @@
     max-height: 17px;
     margin-right: 2.88px;
   }
-
+  &__company {
+    @include media_interval('0', $media_tablet) {
+      width: 100%;
+    }
+  }
   &__company-link {
     margin-right: 20px;
     font-size: 16px;
