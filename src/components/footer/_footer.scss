@@ -11,6 +11,9 @@
     max-width: 768px;
     padding: 80px 60px;
   }
+  @include media_interval('0', $media_desktop) {
+    padding: 70px 20px;
+  }
 
   &_bg {
     background-color: #434343;
@@ -20,11 +23,17 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    @include media_interval('0', $media_tablet) {
+      flex-wrap: wrap;
+    }
 
   }
 
   &__coloms {
     width: 33%;
+    @include media_interval('0', $media_tablet) {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -35,25 +44,46 @@
     padding-bottom: 23px;
 
     border-bottom: 1px solid #666666;
-
+    margin: 20px 0;
     color: #AAAAAA;
   }
 
   &__list {
     padding: 0 0;
     margin: 28px 0;
+
+    @include media_interval('0', $media_tablet) {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-height: 125px;
+      margin-top: 20px;
+
+    }
+  }
+
+  &__elem {
+    margin-bottom: 20px;
+
+    &:nth-child(3n+3) {
+      margin-bottom: 0px;
+    }
   }
 
   &__link {
     font-size: 16px;
     line-height: 22px;
-
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+
 
     color: #FFFFFF;
     transition: opacity 0.4s;
+    @include media_interval('0', $media_tablet) {
+      font-size: 14px;
+      line-height: 19px;
+
+    }
 
     &:hover {
       opacity: 0.5;
@@ -70,16 +100,21 @@
 
   &__input {
     display: flex;
+
+  }
+
+  &__button {
+    max-width: 80px;
   }
 
   &__social {
     display: flex;
     margin-top: 25px;
     padding: 0 0;
-  }
-
-  &__button {
-    max-width: 80px;
+    @include media_interval('0', $media_tablet) {
+      margin-top: 20px;
+      margin-bottom: 60px;
+    }
   }
 
   &__social-link {
@@ -101,6 +136,9 @@
     flex-wrap: wrap;
     padding: 23px 0 0 0;
     border-top: 1px solid #666666;
+    @include media_interval('0', $media_tablet) {
+      padding-top: 9px;
+    }
   }
 
   &__bottom {
@@ -116,7 +154,10 @@
     display: flex;
     margin-right: 170px;
     max-width: 350px;
-
+    @include media_interval('0', $media_tablet) {
+      margin-right: 0;
+      width: 100%;
+    }
   }
 
   &__bottom-text {
@@ -128,73 +169,103 @@
       margin-bottom: 15px;
       margin-top: 15px;
     }
-      &_copirate {
-        margin-right: 115px;
-        max-width: 300px;
-        @include media_interval($media_tablet, $media_desktop) {
-          margin-right: 43px;
-        }
-      }
-
+    @include media_interval('0', $media_tablet) {
+      margin-top: 15px;
+      margin-bottom: 0;
     }
 
-    &__stars-box {
-      display: flex;
-      align-items: center;
-      padding: 0 0;
-      margin-left: 25px;
-    }
-
-    &__star {
-      max-width: 17px;
-      max-height: 17px;
-      margin-right: 2.88px;
-    }
-
-    &__company-link {
-      margin-right: 20px;
-      font-size: 16px;
-      line-height: 22px;
+    &_copirate {
+      margin-right: 115px;
+      max-width: 300px;
       @include media_interval($media_tablet, $media_desktop) {
-        margin-right: 0px;
+        margin-right: 43px;
+        width: 100%;
       }
-      color: #A2A2A2;
-      transition: color 0.4s;
-
-      &:hover {
-        color: #FFFFFF;
-        text-decoration: underline;
+      @include media_interval('0', $media_tablet) {
+        margin-right: 0;
+        margin-top: 15px;
       }
     }
 
   }
 
-
-  .input-size {
-    width: 300px;
-    height: 40px;
-    max-width: 300px;
-
-    color: #EBEBEB;
-    background-color: #666666;
-    border: none;
-    @include media_interval($media_tablet, $media_desktop) {
-      width: 133px;
-    }
-
-  }
-
-  input::placeholder {
-    font-size: 16px;
-    line-height: 22px;
-
+  &__stars-box {
     display: flex;
     align-items: center;
-
-    color: #EBEBEB;;
-
-    padding: 9px 15px;
+    padding: 0;
+    margin-left: 25px;
+    @include media_interval('0', $media_tablet) {
+      align-items: flex-end;
+    }
   }
+
+  &__star {
+    max-width: 17px;
+    max-height: 17px;
+    margin-right: 2.88px;
+  }
+  &__company {
+    @include media_interval('0', $media_tablet) {
+      width: 100%;
+    }
+  }
+  &__company-link {
+    margin-right: 20px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #A2A2A2;
+    transition: color 0.4s;
+    @include media_interval($media_tablet, $media_desktop) {
+      margin-right: 0px;
+    }
+
+
+
+    &:hover {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+  }
+  &__company {
+     @include media_interval('0', $media_tablet) {
+      margin-right: 0px;
+      margin-top: 15px;
+    }
+  }
+}
+
+.form {
+  width: 100%;
+}
+
+.input-size {
+  width: 300px;
+  height: 40px;
+
+
+  color: #EBEBEB;
+  background-color: #666666;
+  border: none;
+  @include media_interval($media_tablet, $media_desktop) {
+    width: 100%;
+  }
+  @include media_interval('0', $media_tablet) {
+    width: 100%;
+  }
+
+}
+
+input::placeholder {
+  font-size: 16px;
+  line-height: 22px;
+
+  display: flex;
+  align-items: center;
+
+  color: #EBEBEB;;
+
+  padding: 9px 15px;
+}
 
 
 
